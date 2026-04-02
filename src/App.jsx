@@ -4,6 +4,8 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import Sample from './component/sample'
+import Navbar from './component/Navbar'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -115,6 +117,7 @@ function App() {
       <div className="ticks"></div>
       <section id="spacer"></section>
       <Sample/>
+      <Navbar/>
     </>
   )
 }
