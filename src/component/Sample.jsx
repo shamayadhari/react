@@ -19,33 +19,59 @@
 
 // export default Sample
 
-import React, {Component} from 'react'
+// import React, {Component} from 'react'
 
-class Sample extends Component{
-    constructor(){
-        super()
-        this.state={
-            count:0
-        }
-    }
+// class Sample extends Component{
+//     constructor(){
+//         super()
+//         this.state={
+//             count:0
+//         }
+//     }
 
-    increment = () => {
-        this.setState({count: this.state.count + 1})
-    }
+//     increment = () => {
+//         this.setState({count: this.state.count + 1})
+//     }
     
-    render(){
-        return (
+//     render(){
+//         return (
+//         <div>
+//           <h2>Trending Topics</h2>
+//            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quod voluptatum iure incidunt, temporibus sequi iusto, pariatur maxime commodi ducimus, nihil autem. Magni modi praesentium, fuga culpa ad animi laboriosam!</p>
+//            <button
+//             className="counter"
+//             onClick={() => this.props.setCount((count) => count + 1)}
+//             >
+//             Count is {this.props.count}
+//             </button>
+//         </div>
+//     )
+//     }
+// }
+// export default Sample
+
+import React, {Component} from 'react'
+import {useState} from 'react'
+function Sample() {
+    const [count, setCount]=useState(0)
+
+    const increment = () => {
+        setCount(count + 1)
+     }
+
+    const decrement = () => {
+        setCount(count - 1)
+     }
+    return (
         <div>
-          <h2>Trending Topics</h2>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quod voluptatum iure incidunt, temporibus sequi iusto, pariatur maxime commodi ducimus, nihil autem. Magni modi praesentium, fuga culpa ad animi laboriosam!</p>
-           <button
-            className="counter"
-            onClick={() => this.props.setCount((count) => count + 1)}
-            >
-            Count is {this.props.count}
-            </button>
+            <h1>Sample component</h1>
+            <h2>{count}</h2>
+            <button onClick={increment}>Increment</button>
+            <button onClick={decrement}>Decrement</button>
         </div>
     )
-    }
+
 }
-export default Sample
+
+export default Sample 
+
